@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     # My Apps
     "apps.main",
     "apps.accounts",
+    "apps.menu",
 ]
 
 MIDDLEWARE = [
