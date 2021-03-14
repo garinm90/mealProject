@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "crispy_forms",
     # My Apps
     "apps.main",
     "apps.accounts",
@@ -108,3 +109,4 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 SITE_ID = 1
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 LOGIN_REDIRECT_URL = "/"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
