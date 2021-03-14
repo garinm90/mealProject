@@ -5,7 +5,8 @@ from django.conf import settings
 class MenuItem(models.Model):
     name = models.CharField(max_length=255)
     available = models.BooleanField(default=False)
-    # image = models.ImageField()
+    image = models.ImageField()
+    description = models.TextField()
 
     def __str__(self):
         return f"{self.name}"
