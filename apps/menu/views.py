@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import MenuItem
 
-# Create your views here.
+
+class MenuListView(generic.ListView):
+    model = MenuItem
