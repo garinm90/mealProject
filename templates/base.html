@@ -11,15 +11,8 @@
     <title>Document</title>
   </head>
   <body>
-  {% include 'navbar.html' %}
-
-
-<div class="container mt-5 pt-5">
-{% block content %}{% endblock content %}
-</div>
-
-
-
+    {% include 'navbar.html' %} {% block nocontainer %} {% endblock %}
+    <div class="container mt-5">{% block content %}{% endblock content %}</div>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
