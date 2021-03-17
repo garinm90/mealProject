@@ -1,20 +1,25 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<div class="position-relative menu-header">
+  <h1 class="text-center text-light">Menu</h1>
+  <div class="row menu-list">
+    {% for menuitem in object_list %}
+    <div class="col-4 mt-5">
+      <div class="card bg-light" style="">
+        <div class="h-50">
+          <img
+            class="card-img-top img-fluid"
+            src="https://picsum.photos/200"
+            alt="Card image cap"
+          />
+        </div>
+        <div class="card-body">
+          <h5>{{ menuitem.name }}</h5>
+          <p class="card-text">{{ menuitem.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
-{% block content %}
-    <h2>Menu</h2>
-    <div class="row">
-        {% for menuitem in object_list %}
-        <div class="col-4">
-        <div class="card" style="width: 18rem;">
-            <div class="h-50">
-            <img class="card-img-top img-fluid" src="https://picsum.photos/200" alt="Card image cap">
-        </div>
-            <div class="card-body">
-                <h5>{{ menuitem.name }}</h5>
-              <p class="card-text">{{ menuitem.name }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        </div>
 {% endblock %}

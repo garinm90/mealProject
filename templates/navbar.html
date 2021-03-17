@@ -1,5 +1,4 @@
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
+<nav class="navbar fixed-top navbar-expand-lg fixed-top navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}">Tini's Cuisine</a>
     <button
@@ -27,11 +26,17 @@
         {% if user.is_authenticated %}
         <li class="nav-item">
           <a href="#" class="btn btn-light">Order</a>
-          <a href="{% url 'account_logout' %}" class="btn btn-outline-light">Log Out</a>
+          <a href="{% url 'account_logout' %}" class="btn btn-outline-light"
+            >Log Out</a
+          >
         </li>
         {% else %}
         <li class="nav-item">
-          <a href="{% url 'account_signup' %}" class="btn mr-2 btn-outline-light">Sign Up</a>
+          <a
+            href="{% url 'account_signup' %}"
+            class="btn mr-2 btn-outline-light"
+            >Sign Up</a
+          >
         </li>
         <li class="nav-item">
           <a href="{% url 'account_login' %}" class="btn btn-light">Login</a>
@@ -41,4 +46,3 @@
     </div>
   </div>
 </nav>
-
